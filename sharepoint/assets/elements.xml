@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    
+    <Field Type="Note" RichText="TRUE" RichTextMode="FullHtml" Name="TermsofUseContent" ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F6}"
+         DisplayName="Terms of Use Content" Sortable="FALSE" Group="_JM Family"></Field>
+    <Field Type="Number" Name="TermsVersion" Percentage="FALSE" ID="{943E7530-5E2B-4C02-8259-CCD93A9ECB18}"
+        DisplayName="Terms Version" Group="_JM Family"></Field>
+    <Field Type="User" Name="AcceptedBy" ID="{0d21642e-6bb4-4039-a90e-40ef1d59f72c}" DisplayName="Accepted By" Group="_JM Family"></Field>
+    <Field Type="Text" Name="Dealer" ID="{466f0b2a-1619-4e91-bc55-2b630fc0cb7a}" DisplayName="Dealer" Group="_JM Family"></Field>
+    <Field Type="Text" Name="DealerCode" ID="{0383e56a-fa19-4c46-9ae1-5a40cfc18491}" DisplayName="Dealer Code" Group="_JM Family"></Field>
+
+    <ContentType ID="0x010042D0C1C200A14B6887742B6344675C8B"
+            Name="Terms of Use"
+            Group="_JM Family"
+            Description="Used for Terms of Use functionality">
+        <FieldRefs>
+            <FieldRef ID="{060E50AC-E9C1-4D3C-B1F9-DE0BCAC300F6}" />
+            <FieldRef ID="{943E7530-5E2B-4C02-8259-CCD93A9ECB18}" />
+        </FieldRefs>
+    </ContentType>
+    <ContentType ID="0x01003149ea7d45674d83a284c27d30a9a9b3" 
+            Name="Terms of Use Acceptance" 
+            Group="_JM Family"
+            Description="This is the Content Type for Terms of Use Acceptance">
+        <FieldRefs>
+            <FieldRef ID="{0d21642e-6bb4-4039-a90e-40ef1d59f72c}" /> 
+            <FieldRef ID="{943E7530-5E2B-4C02-8259-CCD93A9ECB18}" />
+            <FieldRef ID="{466f0b2a-1619-4e91-bc55-2b630fc0cb7a}" />
+            <FieldRef ID="{0383e56a-fa19-4c46-9ae1-5a40cfc18491}" />
+        </FieldRefs>
+</ContentType> 
+
+    <ListInstance
+            CustomSchema="schema.xml"
+            FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+            Title="Terms of Use List"
+            Description="Terms of Use List"
+            TemplateType="100"
+            Url="Lists/TermsOfUseList">
+    </ListInstance>
+    <ListInstance
+            CustomSchema="TermsAcceptanceSchema.xml"
+            FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+            Title="Terms of Use Acceptance List"
+            Description="Terms of Use Acceptance List"
+            TemplateType="100"
+            Url="Lists/TermsOfUseAcceptanceList">
+    </ListInstance>
+
+    <CustomAction
+        Title="TermsOfUseAppExtension"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="e39e7d89-306d-4470-9262-c2b4a51a7380"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+</Elements>

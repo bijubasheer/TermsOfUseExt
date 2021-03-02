@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "terms-of-use-ext-client-side-solution",
+    "id": "495ea1c1-2e3b-440c-a617-536e18918835",
+    "version": "1.0.0.16",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    },
+    "features": [
+      {
+        "title": "Terms of Use",
+        "description": "Lists and code that implements the Terms of Use feature",
+        "id": "37d5ff29-9df2-44c2-9b38-17e973deadc4",
+        "version": "1.0.0.16",
+        "assets": {
+          "elementManifests": [
+            "elements.xml",
+            "ClientSideInstance.xml"
+          ],
+          "elementFiles":[
+            "schema.xml",
+            "TermsAcceptanceSchema.xml"
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/terms-of-use-ext.sppkg"
+  }
+}

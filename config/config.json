@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "terms-of-use-app-extension-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/termsOfUseAppExtension/TermsOfUseAppExtensionApplicationCustomizer.js",
+          "manifest": "./src/extensions/termsOfUseAppExtension/TermsOfUseAppExtensionApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TermsOfUseAppExtensionApplicationCustomizerStrings": "lib/extensions/termsOfUseAppExtension/loc/{locale}.js"
+  }
+}
